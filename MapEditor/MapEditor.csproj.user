@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\BinCodesTabView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\GeneralTabView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\LayoutTabView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\MapEditorView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\BinCodesTabView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\GeneralTabView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\LayoutTabView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MapEditorView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="MapEditor.View.MapEditorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MapEditor.View"
+             xmlns:General="clr-namespace:MapEditor.View"
+             xmlns:Bincode="clr-namespace:MapEditor.View"
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="80*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.618*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Menu Margin="0,0,0,427" Grid.RowSpan="2" >
+            <MenuItem Header="File">
+                <MenuItem Header="New/Customized" Command="{Binding NewButtonClickCommand}"/>
+                <MenuItem Header="Reset" Command="{Binding ResetButtonClickCommand}"/>
+                <MenuItem Header="Import" Command="{Binding ImportButtonClickCommand}"/>
+                <MenuItem Header="Export" Command="{Binding ExportButtonClickCommand}"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+            </MenuItem>
+            <MenuItem Header="Help">
+            </MenuItem>
+        </Menu>
+        <DockPanel Grid.Row="1" Grid.Column="0" Margin="5">
+            <!-- Grid on the left side -->
+            <Border Grid.Column="0" BorderBrush="Black" BorderThickness="1">
+                <!-- Your existing grid content here -->
+                <!-- For example, include the dynamicGrid and its related controls -->
+                <Grid Name="DynamicGrid" Grid.Row="1" Grid.Column="1">
+                </Grid>
+            </Border>
+        </DockPanel>
+        <!-- Right side: TabControl with 30% width -->
+        <DockPanel Grid.Row="1" Grid.Column="1">
+            <TabControl Grid.Column="1" >
+                <TabItem Header="General">
+                    <General:GeneralTabView></General:GeneralTabView>
+                </TabItem>
+                <TabItem Header="Layout">
+                    <local:LayoutTabView></local:LayoutTabView>
+                </TabItem>
+                <TabItem Header="Bincode">
+                    <Bincode:BinCodesTabView></Bincode:BinCodesTabView>
+                </TabItem>
+                
+            </TabControl>
+
+        </DockPanel>
+    </Grid>
+</UserControl>

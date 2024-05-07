@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="MapEditor.View.BinCodesTabView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MapEditor.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+            <Grid>
+                <Grid RenderTransformOrigin="0.489,0.175" Margin="0,0,1,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                </Grid>
+                <!-- Label and button for adding new bin definition -->
+                <Label Grid.Row="0" Grid.Column="0" Name="lblAddButton" HorizontalAlignment="Left" Content="Add Bin Definition Configurations" Margin="0,0,0,316" />
+                <!--<Button Grid.Row="0" Grid.Column="1" Content="+" Click="AddBinDefinition_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Width="74"/>-->
+                <Button Grid.Row="0" Content=" Save " HorizontalAlignment="right" VerticalAlignment="Top" Margin="0,-1,36,0"/>
+                <!-- StackPanel to hold dynamically added controls -->
+                <StackPanel Grid.Row="1" Grid.Column="0" x:Name="BinPreDefinitionStackPanel" Margin="25,50,50,50" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.Column="0" x:Name="BinDefinitionStackPanel" Margin="0,25,50,25" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                </StackPanel>
+
+            </Grid>
+       
+    </Grid>
+</UserControl>
